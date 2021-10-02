@@ -1,0 +1,35 @@
+.mainPage{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://cdn.pixabay.com/photo/2016/01/19/14/53/book-1149031_1280.jpg');
+    background-size: 100%;
+    color:white
+  }
+  
+.mainPage h1{
+  text-shadow: 2px 2px 4px rgb(83, 83, 83);
+}
+
+.mainBtn{
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: black;
+  color:white;
+  opacity: 0.6;
+  margin:20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
+.mainBtn:hover {
+  opacity: 0.7;
+}
