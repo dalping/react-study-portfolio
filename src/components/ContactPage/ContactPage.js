@@ -14,14 +14,12 @@ function ContactPage() {
         <div className="bottomPage">
             <h1>Contact</h1>
             <div className="bottomInfo">
-                <span>홍길동</span>
-                <span><MailOutlined /> userId1234@naver.com</span>
-                <span><PhoneOutlined /> 010-1234-5678</span>
+                <span style={{fontSize:'1.3rem'}}>김보경</span>
+                <span><MailOutlined /> kbing14@naver.com</span>
             </div>
             <div style={{display:'flex',gap:'10px',marginTop:'20px'}}>
-                <GithubOutlined className="icon"/>
+                <GithubOutlined className="icon" alt="https://github.com/dalping"/>
                 <InstagramFilled className="icon"/>
-                <FacebookFilled className="icon"/>
             </div>
         </div>
     )

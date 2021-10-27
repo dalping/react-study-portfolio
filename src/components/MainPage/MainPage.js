@@ -1,7 +1,9 @@
-import React from 'react'
+import React,{useRef} from 'react'
 import './MainPage.css'
 
 function MainPage() {
+
+    const tmp = useRef();
 
     const goScroll = () => {
         window.scrollTo({
@@ -10,8 +12,8 @@ function MainPage() {
           });
     }
     return (
-        <div className="mainPage">
-            <h1>Welcome FEstudy Page!</h1>
+        <div className="mainPage" ref={tmp}>
+            <h1 ref={tmp}>Welcome Bokyung's Portfolio</h1>
             <div className="mainBtn"
             onClick={goScroll}>welcome</div>
         </div>

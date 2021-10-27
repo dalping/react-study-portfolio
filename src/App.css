@@ -28,6 +28,14 @@
   color: #61dafb;
 }
 
+.copyright{
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(185, 185, 185);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
