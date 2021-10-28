@@ -6,9 +6,9 @@ import {
 import { faCss3Alt,faHtml5,faJsSquare,faReact} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function SkillPage() {
+function SkillPage(props) {
     return (
-        <div className="skillPage">
+        <div className="skillPage" ref={el => {props.scrollRef.current[2] = el}}>
             <h1>Skills</h1>
             <div className="skillList">
                 <div>

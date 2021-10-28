@@ -9,9 +9,9 @@ import {
 } from '@ant-design/icons'
 
 
-function ContactPage() {
+function ContactPage(props) {
     return (
-        <div className="bottomPage">
+        <div className="bottomPage" ref={el => {props.scrollRef.current[4] = el}}>
             <h1>Contact</h1>
             <div className="bottomInfo">
                 <span style={{fontSize:'1.3rem'}}>김보경</span>

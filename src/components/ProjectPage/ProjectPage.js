@@ -1,9 +1,9 @@
 import React from 'react'
 import './ProjectPage.css'
 
-function ProjectPage() {
+function ProjectPage(props) {
     return (
-        <div className="projectPage">
+        <div className="projectPage" ref={el => {props.scrollRef.current[3] = el}}>
             <h1>Project</h1>
         </div>
     )

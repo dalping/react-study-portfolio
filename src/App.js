@@ -9,7 +9,7 @@ import ProjectPage from './components/ProjectPage/ProjectPage';
 
 function App() {
 
-  let scrollRef = useRef();
+  let scrollRef = useRef([]);
 
   const handleTop = () => {
     window.scrollTo({
@@ -18,19 +18,26 @@ function App() {
     });
   }
 
-  const goScroll = (target) => {
-    scrollRef.current = target;
+  const handleScroll = (page) => {
+
+    const pageNames = {
+      MAIN : 0,
+      PROFILE : 1,
+      SKILL : 2,
+      PROJECT : 3,
+      CONTACT : 4
+    }
+    scrollRef.current[pageNames[page]].scrollIntoView({ behavior: "smooth" });
   }
 
   return (
     <div className="App">
-      <Navbar/>
-      <MainPage ref={el =>{scrollRef.current[0] = el}}/>
-      <ProfilePage ref={el =>{scrollRef.current[1] = el}}/>
-      <SkillPage ref={el =>{scrollRef.current[2] = el}} />
-      <h1 ref={el =>{scrollRef.current[5] = el}}>si</h1>
-      <ProjectPage ref={el =>{scrollRef.current[3] = el}}/>
-      <ContactPage ref={el =>{scrollRef.current[4] = el}}/>
+      <Navbar handleScroll={handleScroll}/>
+      <MainPage scrollRef={scrollRef}/>
+      <ProfilePage scrollRef={scrollRef}/>
+      <SkillPage scrollRef={scrollRef}/>
+      <ProjectPage scrollRef={scrollRef}/>
+      <ContactPage scrollRef={scrollRef}/>
       <div className="topBtn" onClick={handleTop}>Top</div>
       <div className="copyright">Copyright © Bokyung Kim 2021</div>
     </div>
