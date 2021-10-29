@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function SkillPage(props) {
     return (
         <div className="skillPage" ref={el => {props.scrollRef.current[2] = el}}>
-            <h1>Skills</h1>
+            <h1 style={{marginTop:'30px'}}>Skills</h1>
             <div className="skillList">
                 <div>
                     <span className="title"><FontAwesomeIcon icon={faHtml5}/> HTML</span> 
